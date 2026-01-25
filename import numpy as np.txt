@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Simple Projectile Motion Simulation
+g = 9.8  # acceleration due to gravity
+v0 = 20  # initial velocity (m/s)
+theta = np.radians(45)  # angle in degrees
+
+t_flight = 2 * v0 * np.sin(theta) / g
+t = np.linspace(0, t_flight, 100)
+
+x = v0 * np.cos(theta) * t
+y = v0 * np.sin(theta) * t - 0.5 * g * t**2
+
+plt.plot(x, y)
+plt.title("Projectile Motion")
+plt.xlabel("Distance (m)")
+plt.ylabel("Height (m)")
+plt.show()
