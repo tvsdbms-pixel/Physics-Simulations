@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. Set the Physics Constants
+t = np.linspace(0, 10, 1000)   # Time from 0 to 10 seconds
+A = 10                         # Initial swing of 10cm
+gamma = 0.1                    # Damping (air resistance)
+omega = 2 * np.pi * 2          # Frequency of 2 Hz
+
+# 2. Apply the Formula
+x = A * np.exp(-gamma * t) * np.cos(omega * t)
+
+# 3. Create the Graph
+plt.figure(figsize=(10, 4))
+plt.plot(t, x, color='red', label='Damped Swing')
+plt.axhline(0, color='black', lw=1)
+plt.title("Physics Simulation: Pendulum with Air Resistance")
+plt.xlabel("Time (seconds)")
+plt.ylabel("Displacement (cm)")
+plt.grid(True)
+plt.legend()
+plt.show()
