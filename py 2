@@ -1,0 +1,18 @@
+import numpy as np 
+import matplotlib.pyplot as plt 
+# projectile motion 
+velocity = 20
+velocity = np.linspace(0, 100, 100) 
+theta = 45 
+g = 10 
+cos45 = 0.707
+sin45 = 0.707
+x_horizontal = velocity * cos(theta) * t 
+y_vertical = velocity * sin(theta) * t - 0.5 * g * t**2
+plt.figure(figsize(10,5))
+plt.plot(velocity,x_horizontal , color='red', label="projectile")
+plt.Xlabel("velocity(v) in m/s")
+plt.Ylabel("theta(0) in degree") 
+plt.grid(True)
+plt.legend()
+plt.show()
